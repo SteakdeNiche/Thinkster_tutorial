@@ -40,7 +40,7 @@ app.controller('PostsCtrl', [
       $scope.post.comments.push({
         body: $scope.body,
         author: 'user',
-        upvote: 0
+        upvotes: 0
       });
       $scope.body='';
     };
@@ -51,7 +51,7 @@ app.controller('MainCtrl', [
   '$scope',
   'posts',
   function($scope, posts){
-    posts.posts = [
+    $scope.posts = [
       {title: 'post 1', upvotes: 5},
       {title: 'post 2', upvotes: 2},
       {title: 'post 3', upvotes: 15},
